@@ -6,5 +6,5 @@ module.exports = {
     SENTRY_DSN: process.env.SENTRY_DSN || '',
     hasura_admin_key:
       secrets.read('HASURA_ADMIN_KEY') || process.env.HASURA_ADMIN_KEY || '',
-    hasura_url: process.env.HASURA_URL || 'http://localhost:8080/v1/graphql'
+    hasura_url: process.env.HASURA_URL || 'ssh -R 80:localhost:8080'
 }
